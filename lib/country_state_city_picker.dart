@@ -48,7 +48,7 @@ class _SelectStateState extends State<SelectState> {
 
   Future getCounty() async {
     var countryres = await getResponse() as List;
-    countryres = countryres.firstWhere((data)=>data['name']=='Malaysia');
+    countryres = countryres.firstWhere((data) => data['name'] == 'Malaysia');
     countryres.forEach((data) {
       var model = StatusModel.StatusModel();
       model.name = data['name'];
